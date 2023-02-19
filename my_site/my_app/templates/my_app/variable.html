@@ -8,7 +8,15 @@
 <body>
     <h1>VARIABLE.HTML</h1>
     {% if user_logged_in %}
-    <h1>Weclcome back yor are looged in</h1>
+      
+    <ul>
+        {% for num in list  %}
+            {% if num == 2 %}
+                <li>TWO</li>
+            {%else%}
+                <li>{{num}}</li>
+            {% endif %}
+        {% endfor %}
     {% endif %}
     </ul>
     <h2>{# THIS IS COMMENT #}</h2>
