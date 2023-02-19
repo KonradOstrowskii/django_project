@@ -6,5 +6,6 @@ def example_view(request):
     return render(request,'my_app/example.html')
 
 def variable_view(request):
-    my_var = {'first_name': 'First','last_name': 'Last'}
+    my_var = {'first_name': 'First','last_name': 'Last',
+        'list': [1,2,3,4],'some_dict':{1:2,3:4},'user_logged_in' : True }
     return render(request,'my_app/variable.html',context=my_var)
